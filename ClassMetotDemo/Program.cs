@@ -1,4 +1,5 @@
-﻿namespace ClassMetotDemo
+﻿using System;
+namespace ClassMetotDemo
 {
     class Program
     {
@@ -35,7 +36,7 @@
 
             customerManager.Add(customer1);
             customerManager.Delete(customer2);
-            System.Console.WriteLine("\n---------------------------------------\n");
+            Console.WriteLine("\n---------------------------------------\n");
             customerManager.ListAll(customers);
 
         }
