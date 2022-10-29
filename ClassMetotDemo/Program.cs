@@ -5,11 +5,12 @@ namespace ClassMetotDemo
     {
         static void Main(string[] args)
         {
-            Customer customer1 = new Customer() 
-            { Id=1,
-              FullName="Sayit Sami Koca",
-              AccountNumber="12349090",
-              AccountBalance=2000
+            Customer customer1 = new Customer()
+            {
+                Id = 1,
+                FullName = "Sayit Sami Koca",
+                AccountNumber = "12349090",
+                AccountBalance = 2000
             };
 
             Customer customer2 = new Customer()

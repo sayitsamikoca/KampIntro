@@ -19,9 +19,9 @@ namespace ClassMetotDemo
             Console.WriteLine("Customer List: ");
             foreach (var customer in customers)
             {
-                Console.WriteLine("\nCustomer ID : " + customer.Id + "\nCustomer FullName : " + customer.FullName + 
-                    "\nCustomer Account Number : " + customer.AccountNumber + 
-                    "\nCustomer Account Balance : "+ customer.AccountBalance);
+                Console.WriteLine("\nCustomer ID : " + customer.Id + "\nCustomer FullName : " + customer.FullName +
+                    "\nCustomer Account Number : " + customer.AccountNumber +
+                    "\nCustomer Account Balance : " + customer.AccountBalance);
             }
         }
 
