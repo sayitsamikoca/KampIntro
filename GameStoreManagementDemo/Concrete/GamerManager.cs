@@ -9,16 +9,25 @@ namespace GameStoreManagementDemo.Concrete
 {
     public class GamerManager : IGamerService
     {
-        FakeMernisServiceAdapter fakeMernisService = new FakeMernisServiceAdapter();
+        FakeMernisServiceAdapter _fakeMernisService;
+
+        public GamerManager(FakeMernisServiceAdapter fakeMernisService)
+        {
+            _fakeMernisService = fakeMernisService;
+
+            // Ben bir kimlik doğrulama servisi kulanıyorum!
+            // Bu sınıf artık bağımlı
+        }
+
         public void Register(Gamer gamer)
         {
-            if (fakeMernisService.CheckRealIfPerson(gamer))
+            if (_fakeMernisService.CheckRealIfPerson(gamer))
             {
                 Console.WriteLine("Kayıt Başarılı");
             }
             else
             {
-                Console.WriteLine("Doğrulama Başarısız!!!");
+                Console.WriteLine("\nDoğrulama Başarısız!!!\n");
             }
         }
 
