@@ -1,6 +1,7 @@
 ﻿using System;
 using GameStoreManagementDemo.Entities;
 using GameStoreManagementDemo.Concrete;
+using GameStoreManagementDemo.Adapters;
 
 namespace GameStoreManagementDemo
 {
@@ -46,7 +47,7 @@ namespace GameStoreManagementDemo
             Console.WriteLine("\n -------------------------------------------------------------\n");
 
 
-            GamerManager gamerManager = new GamerManager();
+            GamerManager gamerManager = new GamerManager(new FakeMernisServiceAdapter());
             gamerManager.Register(gamer);
             gamerManager.Unregister(gamer);
             gamerManager.UpdateInformation(gamer);
